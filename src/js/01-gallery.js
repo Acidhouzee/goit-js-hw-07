@@ -18,6 +18,7 @@ function createModal(src) {
 };
 
 gallery.addEventListener('click', (evt) => {
+    evt.preventDefault();
     if (!evt.target.classList.contains('gallery__image')) return;
     if (!evt.target.dataset.source) return;
     const modal = createModal(evt.target.dataset.source);
